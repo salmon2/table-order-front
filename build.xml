@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="mts5-ui-web" default="about" basedir=".">
+
+    <property name="build.dir" value="${basedir}/build"/>
+
+    <tstamp>
+        <format property="DSTAMP" pattern="YYYY-MM-dd" />
+        <format property="TSTAMP" pattern="HHmmss" />
+    </tstamp>
+
+
+    <!-- zip source -->
+    <target name="package-web-dev">
+        <property name="zip.name"		value="mts5-ui-web_dev_${DSTAMP}_${TSTAMP}.zip"/>
+        <delete dir="${basedir}/.next"/>
+
+        <exec executable="cmd" osfamily="windows">
+            <arg value="/c"/>
+            <arg value="npm"/> <arg value="install"/>
+        </exec>
+        <exec executable="cmd" osfamily="windows">
+            <arg value="/c"/>
+            <arg value="npm"/> <arg value="run"/> <arg value="build:staging"/>
+        </exec>
+
+        <zip destfile="${build.dir}/${zip.name}" basedir="${basedir}"
+             includes=".env, .npmrc, Procfile,
+             next.config.js, withTwin.js, image-loader.js, package.json,
+             .platform/**,
+             .next/**, node_modules/**, public/**"/>
+    </target>
+
+
+    <!-- project info -->
+    <target name="about" description="about this dist file">
+        <echo message="targets include: "/>
+        <echo message="   -------------------------------------------------"/>
+        <echo message=" - package-web-dev            : package mts5-ui-web zip for dev"/>
+        
+        <echo message="   -------------------------------------------------"/>
+    </target>
+</project>
