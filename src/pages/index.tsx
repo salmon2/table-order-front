@@ -1,7 +1,8 @@
-import React from "react";
+import MainPage from "@/1_pages/MainPage";
 
-const index = () => {
-  return <div>hello world</div>;
+type indexProps = {};
+
+const index = ({}: indexProps) => {
+  return <MainPage />;
 };
-
 export default index;
