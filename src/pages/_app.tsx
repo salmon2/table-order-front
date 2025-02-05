@@ -6,7 +6,7 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from '@/5_shared/styles/theme';
 import { useWindowCalHeight } from '@/4_entities/settings';
 import { Provider } from 'react-redux';
-import { store } from '@/0_app/redux/store';
+import { store } from '@/5_shared/redux/store';
 
 const queryClient = new QueryClient();
 

@@ -1,5 +1,5 @@
 import BaseLayout from '@/0_app/layouts/BaseLayout';
-import { layoutSelect, setIsShowLeft } from '@/0_app/redux/layout/layoutSlice';
+import { layoutSelect, setIsShowLeft } from '@/5_shared/redux/layout/layoutSlice';
 import { GrayComponent } from '@/4_entities/settings';
 import { useDispatch, useSelector } from 'react-redux';
 

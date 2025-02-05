@@ -6,9 +6,13 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@mui/material": "^6.4.3",
+    "@mui/styled-engine-sc": "^6.4.3",
     "@reduxjs/toolkit": "^2.5.1",
     "@tanstack/react-query": "^5.62.10",
     "axios": "^1.7.9",
@@ -19,11 +23,21 @@
     "styled-components": "^6.1.13"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.4",
+    "@storybook/addon-essentials": "^8.5.3",
+    "@storybook/addon-interactions": "^8.5.3",
+    "@storybook/addon-onboarding": "^8.5.3",
+    "@storybook/blocks": "^8.5.3",
+    "@storybook/nextjs": "^8.5.3",
+    "@storybook/react": "^8.5.3",
+    "@storybook/test": "^8.5.3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^8",
     "eslint-config-next": "15.0.4",
+    "eslint-plugin-storybook": "^0.11.2",
+    "storybook": "^8.5.3",
     "typescript": "^5"
   }
 }
