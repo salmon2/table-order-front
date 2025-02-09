@@ -3,7 +3,6 @@ import styled from 'styled-components';
 const leftWidth = '240px';
 const headerHeight = '44px';
 const rightWidth = '350px';
-const ZINDEX_SIDEBAR = 100; /*수업화면 왼쪽사이드메뉴*/
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -37,8 +36,6 @@ export const LeftNav = styled.nav<{ $isShowNav: boolean }>`
   overflow: hidden;
   transition: all 200ms linear;
 
-  z-index: ${ZINDEX_SIDEBAR};
-
   background-color: #fbfbfb;
   border-right: 0.5px solid #d1d1d1;
   flex-shrink: 0;
@@ -54,6 +51,16 @@ export const RightNav = styled.div<{ $isShowNav: boolean }>`
   overflow: hidden;
   transition: all 200ms linear;
   height: 100%;
+`;
+
+export const Footer = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  height: 40px;
+  width: 100%;
+  border-top: 1px solid black;
 `;
 
 export const MainSection = styled.section``;
