@@ -4,9 +4,10 @@ import '@/5_shared/styles/font.css';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '@/5_shared/styles/theme';
-import { useWindowCalHeight } from '@/4_entities/settings';
+
 import { Provider } from 'react-redux';
 import { store } from '@/5_shared/redux/store';
+import { useWindowCalHeight } from '@/4_entities/common/lib';
 
 const queryClient = new QueryClient();
 

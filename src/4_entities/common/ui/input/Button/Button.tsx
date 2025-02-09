@@ -4,14 +4,15 @@ import { MouseEventHandler } from 'react';
 type ButtonProps = {
   disabled: boolean;
   type: 'button' | 'submit';
-  variant: 'contained' | 'outlined' | 'text';
+  variant: 'text' | 'outlined' | 'contained';
   onClick?: MouseEventHandler<HTMLButtonElement>;
   children: React.ReactNode;
+  style?: React.CSSProperties;
 };
 
-const Button = ({ disabled, variant, type = 'button', children, onClick }: ButtonProps) => {
+const Button = ({ style, disabled, variant, type = 'button', children, onClick }: ButtonProps) => {
   return (
-    <MuiButton type={type} disabled={disabled} onClick={onClick} variant={variant}>
+    <MuiButton style={style} type={type} disabled={disabled} onClick={onClick} variant={variant}>
       {children}
     </MuiButton>
   );

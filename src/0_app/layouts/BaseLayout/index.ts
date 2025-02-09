@@ -1,2 +1,2 @@
-import BaseLayout from "./BaseLayout";
-export default BaseLayout;
+import * as BaseLayout from './style';
+export { BaseLayout };

@@ -1,0 +1,1 @@
+export { useGetSamples } from './useGetSamples';

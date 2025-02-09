@@ -1,7 +1,4 @@
-// Card.stories.ts|tsx
-
 import type { Meta, StoryObj } from '@storybook/react';
-
 import Button from './Button';
 import { fn } from '@storybook/test';
 
