@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const leftWidth = '240px';
 const headerHeight = '44px';
+const footerHeight = '40px';
 const rightWidth = '350px';
 
 export const Wrapper = styled.div`
@@ -21,7 +22,7 @@ export const Header = styled.div`
 export const Body = styled.div`
   display: flex;
 
-  height: calc(100% - ${headerHeight});
+  height: calc(100% - ${headerHeight} - ${footerHeight});
   max-height: calc(100% - ${headerHeight});
 
   @media (max-width: 720px) {
@@ -54,13 +55,16 @@ export const RightNav = styled.div<{ $isShowNav: boolean }>`
 `;
 
 export const Footer = styled.div`
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  // position: absolute;
+  // bottom: 0;
+  // left: 0;
 
   height: 40px;
   width: 100%;
   border-top: 1px solid black;
 `;
 
-export const MainSection = styled.section``;
+export const MainSection = styled.section`
+  overflow: auto;
+  padding: 30px;
+`;
